@@ -5,6 +5,8 @@ var certificate = document.querySelector('#certificate');
 if (certificate) {
   // tel Mask
   $("#input-tel").inputmask("+7 (999) 999-99-99");
+  $("#date").inputmask("99.99.9999");
+  $("#time").inputmask("99:99");
   var srcImgActive;
   var priceTabs = certificate.querySelectorAll('.certificate__price-item');
   var steps = certificate.querySelectorAll(".certificate__step");
