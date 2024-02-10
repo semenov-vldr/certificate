@@ -117,7 +117,6 @@
     gap: 16px
     margin-top: 32px
 
-
   &__button
     border-radius: 30px
     padding: 12px 10px
@@ -155,6 +154,7 @@
     gap: 16px
     align-items: center
     max-width: 408px
+    width: 100%
 
   &__fieldset-friend
     width: 100%
@@ -162,7 +162,6 @@
     flex-direction: column
     gap: 16px
     align-items: center
-
 
   &__field
     width: 100%
@@ -177,8 +176,12 @@
     width: 100%
     display: grid
     grid-template-columns: 1fr 1fr
-    gap: 16px
+    gap: 4px 16px
     align-items: center
+
+  &__label
+    grid-column: 1 / -1
+    font-size: 12px
 
 
 .hidden

@@ -35,12 +35,13 @@
                 form.certificate__form
                     input.certificate__field#input-tel(name="tel" placeholder="+7 (999) 999-99-99" autocomplete="off" required)
                     fieldset.certificate__fieldset-friend
-                        .certificate__data-time
-                            input.certificate__field#date(name="date" placeholder="Дата" autocomplete="off")
-                            input.certificate__field#time(name="time" placeholder="Время" autocomplete="off")
                         input.certificate__field(name="name-friend" placeholder="Имя получателя" maxlength="30" autocomplete="off")
                         input.certificate__field(name="text" placeholder="Текст поздравления" maxlength="100" autocomplete="off")
                         input.certificate__field(name="my-name" placeholder="Имя отправителя" maxlength="30" autocomplete="off")
+                        .certificate__data-time
+                            span.certificate__label отправим карту по СМС:
+                            input.certificate__field#date(name="date" placeholder="Дата" autocomplete="off")
+                            input.certificate__field#time(name="time" placeholder="Время" autocomplete="off")
 
 
             .certificate__buttons
