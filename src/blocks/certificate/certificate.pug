@@ -1,0 +1,45 @@
+.certificate#certificate
+    .certificate__container
+
+        button.certificate__close
+
+        .certificate__step
+            h2.certificate__title Заказать сертификат
+            .certificate__img-wrapper
+                img(src="./assets/img/gifts_empty.jpg")
+            .certificate__price-list
+                button.button.certificate__price-item(data-price="3000") 3000 ₽
+                button.button.certificate__price-item(data-price="5000") 5000 ₽
+                button.button.certificate__price-item(data-price="10000") 10000 ₽
+                button.button.certificate__price-item(data-price="15000") 15000 ₽
+                button.button.certificate__price-item(data-price="25000") 25000 ₽
+                button.button.certificate__price-item(data-price="50000") 50000 ₽
+                button.button.certificate__price-item(data-price="100000") 100000 ₽
+
+
+            .certificate__buttons
+                button#btn-next.button.certificate__button(disabled) Далее
+
+
+        .certificate__step
+            h2.certificate__title Укажите кому сертификат
+            .certificate__img-wrapper
+                img(src="")
+
+            .certificate__form-wrapper
+
+                .certificate__form-tabs
+                    button.button Другу
+                    button.button Себе
+
+                form.certificate__form
+                    input.certificate__field#input-tel(name="tel" placeholder="+7 (999) 999-99-99" autocomplete="off" required)
+                    fieldset.certificate__fieldset-friend
+                        input.certificate__field(name="name-friend" placeholder="Имя получателя" maxlength="30" autocomplete="off")
+                        input.certificate__field(name="text" placeholder="Текст поздравления" maxlength="100" autocomplete="off")
+                        input.certificate__field(name="my-name" placeholder="Имя отправителя" maxlength="30" autocomplete="off")
+
+
+            .certificate__buttons
+                button#btn-prev.button.certificate__button Назад
+                button#btn-pay.button.certificate__button К оплате

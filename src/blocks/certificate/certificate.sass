@@ -1,0 +1,179 @@
+.certificate
+  position: fixed
+  background-color: rgba(#000, 0.7)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow-y: auto
+  z-index: 1000
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__container
+    position: relative
+    background-color: $white
+    max-width: 1000px
+    width: 100%
+    padding: 30px 40px 60px 40px
+    margin: 20px
+    @media (max-width: $width-mobile)
+      min-height: 100%
+      height: auto
+      margin: auto
+      padding: 30px 20px
+
+  .button
+    background-color: $accent
+    color: $white
+    transition: $transition
+    height: fit-content
+    &:hover
+      background-color: $grey
+    &:disabled
+      background-color: $grey
+      cursor: auto
+
+  &__close
+    background-image: url('https://oblik26.ru/wp-content/themes/oblik/images/icons/close-popup.png')
+    position: absolute
+    //top: 0
+    //right: 0
+    width: 28px
+    height: 28px
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    top: -35px
+    right: -35px
+    &:hover
+      opacity: 0.5
+    @media (max-width: $width-mobile)
+      top: 8px
+      right: 8px
+
+  &__title
+    grid-column: 1 / -1
+    font-size: 24px
+    text-transform: uppercase
+    letter-spacing: 0.5em
+    margin-bottom: 40px
+    text-align: center
+    @media (max-width: $width-mobile)
+      font-size: 18px
+      margin-bottom: 16px
+
+  &__step
+    display: grid
+    @media (min-width: $width-mobile)
+      grid-template-columns: 300px auto
+
+  &__img-wrapper
+    position: relative
+    margin: 0 auto
+    width: 250px
+    @media (max-width: $width-mobile)
+      width: 100%
+      max-width: 200px
+      margin-bottom: 24px
+    img
+      display: block
+      width: 100%
+      object-fit: cover
+      user-select: none
+
+
+  &__price-list
+    display: grid
+    grid-template-columns: auto auto
+    grid-auto-rows: min-content
+    max-width: 450px
+    width: 100%
+    margin: 0 auto
+    gap: 16px
+    align-self: center
+    @media (max-width: $width-mobile)
+
+
+  &__price-item
+    padding: 8px 10px
+    width: 100%
+    max-width: 200px
+    font-size: 18px
+    border-radius: 20px
+    @media (max-width: $width-mobile)
+      font-size: 16px
+    &.price-active
+      background-color: $grey
+
+  button
+    cursor: pointer
+
+  &__buttons
+    grid-column: 1 / -1
+    display: flex
+    justify-content: right
+    gap: 16px
+    @media (max-width: $width-mobile)
+      margin-top: 32px
+
+  &__button
+    border-radius: 30px
+    padding: 12px 10px
+    min-width: 150px
+    font-size: 18px
+    @media (max-width: $width-mobile)
+      width: 100%
+      max-width: 50%
+
+  &__form-wrapper
+    display: flex
+    flex-direction: column
+
+  &__form-tabs
+    display: flex
+    justify-content: center
+    gap: 8px
+    margin-bottom: 40px
+    button
+      border-radius: 30px
+      padding: 12px 10px
+      font-size: 18px
+      width: 100%
+      max-width: 200px
+      &.whom-active
+        background-color: $grey
+
+  &__form
+    display: flex
+    flex-direction: column
+    gap: 16px
+    align-items: center
+
+  &__fieldset-friend
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 16px
+    align-items: center
+    //&.js-hidden
+    //  opacity: 0
+    //  pointer-events: none
+    //  cursor: none
+
+  &__field
+    width: 100%
+    max-width: 408px
+    outline: none
+    border: 1px solid #bfbfbf
+    font-size: 16px
+    border-radius: 30px
+    height: 40px
+    padding: 4px 4px 4px 24px
+
+
+.hidden
+  display: none !important

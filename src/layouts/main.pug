@@ -1,0 +1,30 @@
+block variables
+    - var activePage = activePage
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        //[if IE]
+        meta(http-equiv='X-UA-Compatible' content="IE = edge")
+
+        meta(name="viewport" content="width=device-width,initial-scale=1 shrink-to-fit=no")
+        meta(name="keywords" content="")
+
+        link(rel="stylesheet" type='text/css' href="./assets/css/libs.css")
+        link(rel="stylesheet" type='text/css' href="./assets/css/main.css")
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+
+        // inputmask
+        script(src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js")
+
+
+    body
+        include ../blocks/header/header
+        main.main
+            block content
+        include ../blocks/footer/footer
+    script(src="./assets/scripts/main.js" type="module")
+    block script
