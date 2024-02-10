@@ -4,6 +4,8 @@ if (certificate) {
 
   // tel Mask
   $("#input-tel").inputmask("+7 (999) 999-99-99");
+  $("#date").inputmask("99.99.9999");
+  $("#time").inputmask("99:99");
 
 
   let srcImgActive;
