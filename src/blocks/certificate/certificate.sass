@@ -9,9 +9,15 @@
   bottom: 0
   overflow-y: auto
   z-index: 1000
-  display: flex
   align-items: center
   justify-content: center
+  display: none
+  visibility: hidden
+  &.js-visible
+    display: flex
+    visibility: visible
+
+
 
   &__container
     position: relative

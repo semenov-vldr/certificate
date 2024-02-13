@@ -31,6 +31,7 @@ if (certificate) {
       priceTab.classList.add('price-active');
       const dataPrice = +priceTab.dataset.price;
       Step_1_img.src = `./assets/img/gifts_${dataPrice}.jpg`;
+      //Step_1_img.src = `/wp-content/uploads/2022/12/gifts_${dataPrice}.jpg`;
       srcImgActive = Step_1_img.src;
       btnNext.disabled = false;
     });
@@ -65,12 +66,21 @@ if (certificate) {
         fieldsetFriend.classList.remove("hidden");
       }
     });
+  });
 
+  const closeBtn = certificate.querySelector('.certificate__close');
+  closeBtn.addEventListener("click", () => {
+    certificate.classList.remove("js-visible");
+  });
 
+  const btnOpen = document.querySelector('.btn-open');
+  btnOpen.addEventListener("click", () => {
+    certificate.classList.add("js-visible");
+  });
 
-  })
-
+  document.body.addEventListener("click", (evt) => {
+    if (evt.target === certificate) {
+      certificate.classList.remove("js-visible");
+    }
+  });
 }
-
-
-
