@@ -28,6 +28,7 @@ if (certificate) {
       priceTab.classList.add('price-active');
       var dataPrice = +priceTab.dataset.price;
       Step_1_img.src = "./assets/img/gifts_".concat(dataPrice, ".jpg");
+      //Step_1_img.src = `/wp-content/uploads/2022/12/gifts_${dataPrice}.jpg`;
       srcImgActive = Step_1_img.src;
       btnNext.disabled = false;
     });
@@ -56,6 +57,19 @@ if (certificate) {
         fieldsetFriend.classList.remove("hidden");
       }
     });
+  });
+  var closeBtn = certificate.querySelector('.certificate__close');
+  closeBtn.addEventListener("click", function () {
+    certificate.classList.remove("js-visible");
+  });
+  var btnOpen = document.querySelector('.btn-open');
+  btnOpen.addEventListener("click", function () {
+    certificate.classList.add("js-visible");
+  });
+  document.body.addEventListener("click", function (evt) {
+    if (evt.target === certificate) {
+      certificate.classList.remove("js-visible");
+    }
   });
 }
 "use strict";
